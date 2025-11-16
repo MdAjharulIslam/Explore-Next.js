@@ -6,7 +6,7 @@ const page = () => {
   const [quiry, setQuiry] = useState("");
 
   const filterPosts = posts.filter((post) => {
-    return post.title.toLowerCase().includes(quiry.toLowerCase());
+    return post.title.toLowerCase().startsWith(quiry.toLowerCase());
   });
   return (
     <div>
