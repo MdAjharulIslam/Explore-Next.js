@@ -13,7 +13,7 @@ const page = () => {
       <div>
         <h1>Search posts</h1>
         <input
-          type="text"
+          type="text" 
           name=""
           id=""
           onChange={(e) => setQuiry(e.target.value)}
