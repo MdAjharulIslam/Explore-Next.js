@@ -1,15 +1,15 @@
 "use client";
 import React, { useState } from "react";
 import { posts } from "../search/post.js";
+import Link from "next/link.js";
 const page = () => {
-  const [query, setQuiry] = useState("");
-  const cetagory = ["CSS", "Programming", "Frontend", "Web Dev"];
-  const fetchCetagory = posts.filter((post) => {
-    return post.category.toLowerCase().includes(query.toLowerCase());
-  });
+ 
+  const cetagory = ["CSS", "Programming", "Frontend", "Web-Dev"];
+  
 
   return (
     <div>
+      <h1>Category page</h1>
       {posts.map((post) => {
         return (
           <div key={post.id}>
@@ -21,20 +21,13 @@ const page = () => {
 <br /><br /><br /><br />
       <div>
         {cetagory.map((k, index) => {
-          return <li key={index} onClick={() => setQuiry(k)}>{k}</li>;
+          return <li key={index} >
+          <Link href={`/cetagory/${k}`}>{k}</Link>
+          </li>
         })}
       </div>
       <br /><br /><br /><br />
-      <div>
-        {fetchCetagory.map((post) => {
-          return (
-            <div key={post.id}>
-              <li>{post.title}</li>
-              <li>{post.category}</li>
-            </div>
-          );
-        })}
-      </div>
+      
     </div>
   );
 };
