@@ -10,6 +10,7 @@ const Page = async({ params }) => {
   return (
     <div>
         {id}
+        <br /><br />
       {fetchData.map((post) => (
         <div key={post.id}>
           <li>{post.title}</li>
