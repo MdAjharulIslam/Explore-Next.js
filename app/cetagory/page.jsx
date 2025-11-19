@@ -21,7 +21,7 @@ const page = () => {
 <br /><br /><br /><br />
       <div>
         {cetagory.map((k, index) => {
-          return <li onClick={() => setQuiry(k)}>{k}</li>;
+          return <li key={index} onClick={() => setQuiry(k)}>{k}</li>;
         })}
       </div>
       <br /><br /><br /><br />
