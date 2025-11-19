@@ -4,7 +4,7 @@ const Page = async({ params }) => {
   const { id } = await params; 
 
   const fetchData = posts.filter((post) =>
-    post.category.toLowerCase().includes(id.toLowerCase())
+    post.category.toLowerCase()===id.toLowerCase()
   );
 
   return (
