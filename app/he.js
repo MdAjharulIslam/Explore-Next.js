@@ -5,7 +5,7 @@ import React from 'react'
 const He = () => {
   return (
     <div>
-      this is he page
+      this is home page
     </div>
   )
 }
